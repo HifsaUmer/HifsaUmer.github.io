@@ -1,305 +1,209 @@
-/* style.css - PREMIUM VERSION */
+// ============================================================
+// DATA
+// ============================================================
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+// Skills Data - Add/Remove/Update as needed
+const skillsData = [
+    { icon: '🐍', name: 'Python' },
+    { icon: '💻', name: 'C#' },
+    { icon: '🌐', name: 'ASP.NET MVC' },
+    { icon: '⚛️', name: 'React' },
+    { icon: '🟦', name: 'NestJS' },
+    { icon: '📘', name: 'TypeScript' },
+    { icon: '🟨', name: 'JavaScript' },
+    { icon: '🤖', name: 'Machine Learning' },
+    { icon: '🐘', name: 'PostgreSQL' },
+    { icon: '🗄️', name: 'SQL' },
+    { icon: '🐙', name: 'Git & GitHub' },
+    { icon: '🐧', name: 'Linux' },
+    { icon: '📊', name: 'Data Analysis' },
+    { icon: '📈', name: 'Power BI' },
+    { icon: '🧪', name: 'Playwright' },
+    { icon: '🔄', name: 'Cypress' },
+    { icon: '📮', name: 'Postman' },
+    { icon: '📋', name: 'Jira' },
+    { icon: '✅', name: 'Testing & QA' },
+];
 
-html{
-    scroll-behavior:smooth;
-}
+// Projects Data - Add your projects here!
+const projectsData = [{
+    icon: '🗳️',
+    title: 'Online Voting System',
+    subtitle: 'Academic Project | 2024',
+    tags: ['ASP.NET MVC', 'C#', 'SQL Server'],
+    description: 'Developed a secure online voting system with authentication, authorization, and automated vote counting logic.',
+    link: '#'
+}, {
+    icon: '📚',
+    title: 'Academic Records System',
+    subtitle: 'Academic Project | 2024',
+    tags: ['PostgreSQL', 'Express.js', 'Alpine.js'],
+    description: 'Full-stack system with hierarchical navigation, automated GPA/CGPA calculations, and optimized SQL queries reducing retrieval time by 70%.',
+    link: '#'
+}, {
+    icon: '☕',
+    title: 'Cafe Management System',
+    subtitle: 'Academic Project | 2023',
+    tags: ['Java', 'Data Structures', 'Queues'],
+    description: 'Java-based desktop application for inventory and billing management using queues and heap sort. Improved runtime efficiency.',
+    link: '#'
+}, {
+    icon: '📊',
+    title: 'Data Analytics Dashboard',
+    subtitle: 'Personal Project | 2024',
+    tags: ['Python', 'Pandas', 'Power BI'],
+    description: 'Interactive dashboard for data visualization and analysis, providing actionable insights from complex datasets.',
+    link: '#'
+}, {
+    icon: '🧪',
+    title: 'Automation Testing Suite',
+    subtitle: 'Personal Project | 2024',
+    tags: ['Playwright', 'Cypress', 'TypeScript'],
+    description: 'End-to-end testing framework for web applications with automated test case generation and reporting.',
+    link: '#'
+}, {
+    icon: '🤖',
+    title: 'AI Chatbot Prototype',
+    subtitle: 'Academic Project | 2024',
+    tags: ['Python', 'NLP', 'TensorFlow'],
+    description: 'Intelligent chatbot using natural language processing and machine learning for automated customer support.',
+    link: '#'
+}];
 
-body{
-    font-family:'Poppins',sans-serif;
-    background: radial-gradient(circle at top, #0f172a, #020617);
-    color:white;
-    line-height:1.6;
-}
+const typingPhrases = [
+    'AI Enthusiast',
+    'Full Stack Developer',
+    'QA & Testing Specialist',
+    'Machine Learning Learner',
+    'Tech Innovator'
+];
 
-/* NAVBAR - GLASS EFFECT */
-.navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 10%;
-    position:sticky;
-    top:0;
-    z-index:1000;
+// ============================================================
+// TYPING EFFECT
+// ============================================================
 
-    background: rgba(17, 24, 39, 0.6);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(56, 189, 248, 0.2);
-}
+let phraseIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const typedEl = document.getElementById('typed');
 
-.logo{
-    font-size:26px;
-    font-weight:800;
-    color:#38bdf8;
-    letter-spacing:1px;
-    text-shadow:0 0 15px rgba(56,189,248,0.4);
-}
-
-.nav-links{
-    display:flex;
-    list-style:none;
-}
-
-.nav-links li{
-    margin-left:25px;
-}
-
-.nav-links a{
-    text-decoration:none;
-    color:#e2e8f0;
-    transition:0.3s;
-    font-weight:500;
-    position:relative;
-}
-
-.nav-links a::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-5px;
-    width:0%;
-    height:2px;
-    background:#38bdf8;
-    transition:0.3s;
-}
-
-.nav-links a:hover{
-    color:#38bdf8;
-}
-
-.nav-links a:hover::after{
-    width:100%;
-}
-
-/* HERO */
-.hero{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:20px;
-}
-
-.hero-content{
-    max-width:850px;
-}
-
-.hero h1{
-    font-size:70px;
-    margin-bottom:20px;
-    font-weight:800;
-    background: linear-gradient(90deg,#38bdf8,#60a5fa,#a78bfa);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-    animation: glow 3s infinite alternate;
-}
-
-@keyframes glow{
-    from{filter: drop-shadow(0 0 10px rgba(56,189,248,0.2));}
-    to{filter: drop-shadow(0 0 20px rgba(168,85,247,0.4));}
-}
-
-.hero span{
-    color:#38bdf8;
-}
-
-.hero h2{
-    font-size:28px;
-    margin-bottom:20px;
-    color:#cbd5e1;
-}
-
-.hero p{
-    font-size:18px;
-    margin-bottom:35px;
-    color:#94a3b8;
-}
-
-/* BUTTONS */
-.hero-buttons{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-}
-
-.btn{
-    background: linear-gradient(135deg,#38bdf8,#3b82f6);
-    color:black;
-    padding:12px 28px;
-    border-radius:12px;
-    text-decoration:none;
-    font-weight:700;
-    transition:0.3s;
-    box-shadow:0 8px 20px rgba(56,189,248,0.2);
-}
-
-.btn:hover{
-    transform:translateY(-4px);
-    box-shadow:0 12px 25px rgba(56,189,248,0.4);
-}
-
-.btn-outline{
-    border:2px solid #38bdf8;
-    color:#38bdf8;
-    padding:12px 28px;
-    border-radius:12px;
-    text-decoration:none;
-    font-weight:600;
-    transition:0.3s;
-}
-
-.btn-outline:hover{
-    background:#38bdf8;
-    color:black;
-}
-
-/* SECTIONS */
-.section{
-    padding:100px 10%;
-}
-
-.section h2{
-    font-size:44px;
-    margin-bottom:40px;
-    color:#38bdf8;
-    text-shadow:0 0 10px rgba(56,189,248,0.2);
-}
-
-/* SKILLS */
-.skills-container{
-    display:flex;
-    flex-wrap:wrap;
-    gap:20px;
-}
-
-.skill-card{
-    background: rgba(30, 41, 59, 0.8);
-    padding:14px 24px;
-    border-radius:14px;
-    transition:0.3s;
-    cursor:pointer;
-    border:1px solid rgba(56,189,248,0.1);
-}
-
-.skill-card:hover{
-    background:#38bdf8;
-    color:black;
-    transform:translateY(-6px) scale(1.05);
-}
-
-/* PROJECTS */
-.projects-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:30px;
-}
-
-.project-card{
-    background: rgba(30, 41, 59, 0.85);
-    padding:30px;
-    border-radius:18px;
-    transition:0.3s;
-    border:1px solid rgba(56,189,248,0.1);
-}
-
-.project-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 15px 30px rgba(0,0,0,0.4);
-}
-
-.project-card h3{
-    margin-bottom:15px;
-    color:#38bdf8;
-}
-
-.project-card p{
-    margin-bottom:15px;
-    color:#cbd5e1;
-}
-
-.project-card ul{
-    margin-left:18px;
-    margin-bottom:20px;
-}
-
-/* EDUCATION */
-.education-card{
-    background: rgba(30, 41, 59, 0.85);
-    padding:25px;
-    border-radius:15px;
-    margin-bottom:20px;
-    border:1px solid rgba(56,189,248,0.1);
-}
-
-/* CERTIFICATIONS */
-.certifications{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.cert-card{
-    background: rgba(30, 41, 59, 0.85);
-    padding:20px;
-    border-radius:12px;
-    transition:0.3s;
-    border:1px solid rgba(56,189,248,0.1);
-}
-
-.cert-card:hover{
-    transform:translateY(-6px);
-}
-
-/* CONTACT */
-.social-links{
-    margin-top:20px;
-}
-
-.social-links a{
-    margin-right:25px;
-    text-decoration:none;
-    color:#38bdf8;
-    font-weight:600;
-    transition:0.3s;
-}
-
-.social-links a:hover{
-    color:#60a5fa;
-}
-
-/* FOOTER */
-footer{
-    background:#0b1220;
-    text-align:center;
-    padding:25px;
-    margin-top:60px;
-    border-top:1px solid rgba(56,189,248,0.1);
-    color:#94a3b8;
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-
-    .hero h1{
-        font-size:42px;
+function typeEffect() {
+    const current = typingPhrases[phraseIndex];
+    if (isDeleting) {
+        typedEl.textContent = current.substring(0, charIndex - 1);
+        charIndex--;
+    } else {
+        typedEl.textContent = current.substring(0, charIndex + 1);
+        charIndex++;
     }
 
-    .hero h2{
-        font-size:20px;
+    let speed = isDeleting ? 60 : 120;
+
+    if (!isDeleting && charIndex === current.length) {
+        speed = 2000;
+        isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % typingPhrases.length;
+        speed = 500;
     }
 
-    .nav-links{
-        display:none;
-    }
-
-    .hero-buttons{
-        flex-direction:column;
-        align-items:center;
-    }
+    setTimeout(typeEffect, speed);
 }
+typeEffect();
+
+// ============================================================
+// RENDER SKILLS
+// ============================================================
+
+const skillsGrid = document.getElementById('skillsGrid');
+skillsData.forEach(skill => {
+    const div = document.createElement('div');
+    div.className = 'skill-item';
+    div.innerHTML = `
+        <span class="icon">${skill.icon}</span>
+        <span class="name">${skill.name}</span>
+    `;
+    skillsGrid.appendChild(div);
+});
+
+// ============================================================
+// RENDER PROJECTS
+// ============================================================
+
+const projectsGrid = document.getElementById('projectsGrid');
+projectsData.forEach(proj => {
+    const div = document.createElement('div');
+    div.className = 'project-card';
+    div.innerHTML = `
+        <div class="icon">${proj.icon}</div>
+        <h3>${proj.title}</h3>
+        <div class="sub">${proj.subtitle}</div>
+        <div class="tags">
+            ${proj.tags.map(t => `<span>${t}</span>`).join('')}
+        </div>
+        <p>${proj.description}</p>
+        <a href="${proj.link}" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
+    `;
+    projectsGrid.appendChild(div);
+});
+
+// ============================================================
+// HAMBURGER MENU
+// ============================================================
+
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('open');
+});
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('open');
+    });
+});
+
+// ============================================================
+// NAVBAR SCROLL EFFECT
+// ============================================================
+
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+// ============================================================
+// CONTACT FORM
+// ============================================================
+
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('🚀 Thank you for reaching out! I\'ll get back to you soon.');
+    this.reset();
+});
+
+// ============================================================
+// SMOOTH SCROLL FOR NAV LINKS
+// ============================================================
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+});
+
+console.log('🚀 Hifsa Umer Portfolio loaded!');
