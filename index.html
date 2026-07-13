@@ -1,344 +1,259 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hifsa Umer | AI Enthusiast & Full Stack Developer</title>
 
-  <title>Hifsa Umer | Portfolio</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
-
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-  <!-- NAVBAR -->
-
-  <nav class="navbar">
-
-    <div class="logo">Hifsa Umer</div>
-
-    <ul class="nav-links">
-
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-
-    </ul>
-
-  </nav>
-
-  <!-- HERO SECTION -->
-
-  <section class="hero">
-
-    <div class="hero-content">
-
-      <h1>
-        Hi, I'm <span>Hifsa Umer</span>
-      </h1>
-
-      <h2>
-        AI Enthusiast | Full Stack Developer | QA & Testing
-      </h2>
-
-      <p>
-        BSCS Student at SZABIST University passionate about
-        Artificial Intelligence, Full Stack Development,
-        Testing, and DevOps.
-      </p>
-
-      <div class="hero-buttons">
-
-        <a href="#projects" class="btn">View Projects</a>
-
-        <a href="#contact" class="btn-outline">Contact Me</a>
-
-      </div>
-
+    <!-- ===== ANIMATED BACKGROUND ===== -->
+    <div class="bg-orbs">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
 
-  </section>
-
-  <!-- ABOUT -->
-
-  <section id="about" class="section">
-
-    <h2>About Me</h2>
-
-    <p>
-      I am a Computer Science student at SZABIST University
-      with strong interest in Artificial Intelligence,
-      Full Stack Development, QA Automation, and DevOps.
-      I enjoy solving real-world problems through technology
-      and continuously improving my technical skills.
-    </p>
-
-    <p>
-      I have experience working with technologies like
-      ASP.NET MVC, React, NestJS, TypeScript, PostgreSQL,
-      and testing tools including Playwright, Cypress,
-      Jira, and Postman.
-    </p>
-
-  </section>
-
-  <!-- SKILLS -->
-
-  <section id="skills" class="section">
-
-    <h2>Technical Skills</h2>
-
-    <div class="skills-container">
-
-      <div class="skill-card">Python</div>
-
-      <div class="skill-card">C#</div>
-
-      <div class="skill-card">ASP.NET MVC</div>
-
-      <div class="skill-card">React</div>
-
-      <div class="skill-card">NestJS</div>
-
-      <div class="skill-card">TypeScript</div>
-
-      <div class="skill-card">JavaScript</div>
-
-      <div class="skill-card">Machine Learning</div>
-
-      <div class="skill-card">PostgreSQL</div>
-
-      <div class="skill-card">SQL</div>
-
-      <div class="skill-card">Git & GitHub</div>
-
-      <div class="skill-card">Linux</div>
-
-      <div class="skill-card">Google Colab</div>
-
-      <div class="skill-card">Data Analysis</div>
-
-      <div class="skill-card">Power BI</div>
-
-      <div class="skill-card">Playwright</div>
-
-      <div class="skill-card">Cypress</div>
-
-      <div class="skill-card">Postman</div>
-
-      <div class="skill-card">Jira</div>
-
-      <div class="skill-card">Testing & QA</div>
-
-    </div>
-
-  </section>
-
-  <!-- PROJECTS -->
-
-  <section id="projects" class="section">
-
-    <h2>Projects</h2>
-
-    <div class="projects-container">
-
-      <!-- PROJECT 1 -->
-
-      <div class="project-card">
-
-        <h3>Online Voting System</h3>
-
-        <p>
-          Developed a secure Online Voting System using
-          ASP.NET MVC and C#.
-        </p>
-
-        <ul>
-
-          <li>Implemented Authentication & Authorization</li>
-
-          <li>Developed Vote Counting Logic</li>
-
-          <li>Built secure voting workflow</li>
-
-          <li>Worked with team collaboration</li>
-
-        </ul>
-
-        <a href="https://github.com/Rida-view/OnlineVotingSystem"
-          target="_blank">
-          View GitHub Repository
-        </a>
-
-      </div>
-
-      <!-- PROJECT 2 -->
-
-      <div class="project-card">
-
-        <h3>Academic Records System</h3>
-
-        <p>
-          Full-stack system built using PostgreSQL,
-          Express.js, and Alpine.js.
-        </p>
-
-        <ul>
-
-          <li>Hierarchical Navigation System</li>
-
-          <li>Automated GPA/CGPA calculations</li>
-
-          <li>Optimized SQL queries</li>
-
-          <li>Reduced retrieval time by 70%</li>
-
-        </ul>
-
-      </div>
-
-      <!-- PROJECT 3 -->
-
-      <div class="project-card">
-
-        <h3>Cafe Management System</h3>
-
-        <p>
-          Java-based desktop application for inventory
-          and billing management.
-        </p>
-
-        <ul>
-
-          <li>Used Queues and Heap Sort</li>
-
-          <li>Billing Automation</li>
-
-          <li>Improved runtime efficiency</li>
-
-          <li>Fixed memory leaks and optimized code</li>
-
-        </ul>
-
-      </div>
-
-     
-
-     
-
-    </div>
-
-  </section>
-
-  <!-- EDUCATION -->
-
-  <section id="education" class="section">
-
-    <h2>Education</h2>
-
-    <div class="education-card">
-
-      <h3>SZABIST University</h3>
-
-      <p>Bachelors of Computer Science</p>
-
-      <p>2023 - 2027</p>
-
-    </div>
-
-    <div class="education-card">
-
-      <h3>TCF College</h3>
-
-      <p>FSC Pre-Engineering</p>
-
-      <p>2021 - 2023</p>
-
-    </div>
-
-  </section>
-
-  <!-- CERTIFICATIONS -->
-
-  <section class="section">
-
-    <h2>Certifications & Achievements</h2>
-
-    <div class="certifications">
-
-      <div class="cert-card">
-        Google Data Analytics Professional Certificate
-      </div>
-
-      <div class="cert-card">
-        Machine Learning — LUMS x ILMX
-      </div>
-
-      <div class="cert-card">
-        Participant — Database Management Competition
-      </div>
-
-      <div class="cert-card">
-        Runner-Up — Digital Logic Design Competition
-      </div>
-
-      <div class="cert-card">
-        Participant — Debugging & Speed Coding Competitions
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- CONTACT -->
-
-  <section id="contact" class="section">
-
-    <h2>Contact</h2>
-
-    <p>Email: hifsaumer629@gmail.com</p>
-
-    <p>Phone: +92 3093565860</p>
-
-    <div class="social-links">
-
-     <a href="https://github.com/HifsaUmer" target="_blank" rel="noopener noreferrer">
-  GitHub
-</a>
-
-      <a href="https://www.linkedin.com/in/hifsa-umer-82b882246"
-        target="_blank">
-        LinkedIn
-      </a>
-
-    </div>
-
-  </section>
-
-  <!-- FOOTER -->
-
-  <footer>
-
-    <p>
-      © 2026 Hifsa Umer | Portfolio
-    </p>
-
-  </footer>
-
-  <script src="script.js"></script>
+    <!-- ===== NAVIGATION ===== -->
+    <nav id="navbar">
+        <div class="container">
+            <a href="#" class="logo">HU</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Hi, I'm <span class="highlight">Hifsa Umer</span></h1>
+                    <p class="subtitle">🤖 <span>AI Enthusiast</span> · <span>Full Stack Developer</span> · <span>QA & Testing</span></p>
+                    <div class="hero-typing">
+                        <span id="typed"></span><span class="cursor"></span>
+                    </div>
+                    <div class="hero-badges">
+                        <span class="badge">🎓 BSCS Student</span>
+                        <span class="badge">⚡ SZABIST</span>
+                        <span class="badge">🤖 AI & ML</span>
+                        <span class="badge">🧪 QA Automation</span>
+                    </div>
+                    <div class="hero-social">
+                        <a href="mailto:hifsaumer629@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://linkedin.com/in/hifsa-umer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/hifsaumer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://hifsaumer.github.io" aria-label="Portfolio"><i class="fas fa-globe"></i></a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="avatar-wrapper">
+                        <div class="avatar-ring"></div>
+                        <div class="avatar-inner">
+                            <span class="avatar-placeholder">👩‍💻</span>
+                            <div class="floating-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About <span>Me</span></h2>
+                <p>Passionate about AI, Full Stack Development, and Quality Assurance</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        I'm a <strong>Computer Science student</strong> at <strong>SZABIST University</strong> with a strong interest in 
+                        <strong>Artificial Intelligence</strong>, <strong>Full Stack Development</strong>, <strong>QA Automation</strong>, 
+                        and <strong>DevOps</strong>. I enjoy solving real-world problems through technology and continuously improving my technical skills.
+                    </p>
+                    <p>
+                        I have experience working with technologies like <strong>ASP.NET MVC</strong>, <strong>React</strong>, 
+                        <strong>NestJS</strong>, <strong>TypeScript</strong>, <strong>PostgreSQL</strong>, and testing tools including 
+                        <strong>Playwright</strong>, <strong>Cypress</strong>, <strong>Jira</strong>, and <strong>Postman</strong>.
+                    </p>
+                    <p>
+                        🎯 <strong>Mission:</strong> Building intelligent, scalable, and user-friendly applications that make a difference.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="number">2023</div>
+                        <div class="label">Started BSCS</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number">10+</div>
+                        <div class="label">Projects Completed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number">5+</div>
+                        <div class="label">Tech Stacks</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number">🏆</div>
+                        <div class="label">Competitions</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2>Technical <span>Skills</span></h2>
+                <p>Technologies I work with to build great solutions</p>
+            </div>
+            <div class="skills-grid" id="skillsGrid"></div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured <span>Projects</span></h2>
+                <p>Solutions that delivered real business impact</p>
+            </div>
+            <div class="projects-grid" id="projectsGrid"></div>
+        </div>
+    </section>
+
+    <!-- ===== EDUCATION ===== -->
+    <section id="education">
+        <div class="container">
+            <div class="section-header">
+                <h2>Education & <span>Certifications</span></h2>
+                <p>My academic journey and achievements</p>
+            </div>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="icon">🎓</div>
+                    <h3>Bachelors of Computer Science</h3>
+                    <p class="institution">SZABIST University</p>
+                    <p class="date">2023 – 2027</p>
+                </div>
+                <div class="education-card">
+                    <div class="icon">📘</div>
+                    <h3>FSC Pre-Engineering</h3>
+                    <p class="institution">TCF College</p>
+                    <p class="date">2021 – 2023</p>
+                </div>
+                <div class="education-card">
+                    <div class="icon">📜</div>
+                    <h3>Google Data Analytics</h3>
+                    <p class="institution">Professional Certificate</p>
+                    <p class="date">Completed</p>
+                </div>
+                <div class="education-card">
+                    <div class="icon">🤖</div>
+                    <h3>Machine Learning</h3>
+                    <p class="institution">LUMS x ILMX</p>
+                    <p class="date">Completed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Let's <span>Connect</span></h2>
+                <p>Have a project in mind? Let's talk!</p>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>
+                        I'm always open to discussing new opportunities, collaborations,
+                        or just having a chat about technology.
+                    </p>
+                    <div class="contact-item">
+                        <div class="icon"><i class="fas fa-envelope"></i></div>
+                        <div class="text">
+                            <strong>Email</strong>
+                            hifsaumer629@gmail.com
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon"><i class="fas fa-phone"></i></div>
+                        <div class="text">
+                            <strong>Phone</strong>
+                            +92 309 3565860
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="text">
+                            <strong>Location</strong>
+                            Karachi, Pakistan
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon"><i class="fab fa-linkedin-in"></i></div>
+                        <div class="text">
+                            <strong>LinkedIn</strong>
+                            <a href="https://linkedin.com/in/hifsa-umer">linkedin.com/in/hifsa-umer</a>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <input type="text" placeholder="Your Name" required />
+                    <input type="email" placeholder="Your Email" required />
+                    <input type="text" placeholder="Subject" />
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message <i class="fas fa-arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <p>
+                &copy; 2026 Hifsa Umer &middot; Crafted by
+                <span class="heart">Hifsa</span> &middot;
+                <a href="#home">Back to top <i class="fas fa-arrow-up"></i></a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- ===== JavaScript ===== -->
+    <script src="script.js"></script>
 
 </body>
-
 </html>
