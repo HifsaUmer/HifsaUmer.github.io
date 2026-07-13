@@ -31,11 +31,11 @@ const skillsData = [
     { icon: '🌐', name: 'Cisco Networking' },
     { icon: '🔒', name: 'Network Security' },
     { icon: '☁️', name: 'Docker' },
-    { icon: '🔄', name: 'CI/CD' },
+    { icon: '🔄', name: 'CI/CD' }
 ];
 
 // ============================================================
-// PROJECTS DATA - All Projects Included
+// PROJECTS DATA
 // ============================================================
 
 const projectsData = [{
@@ -115,8 +115,8 @@ window.addEventListener('load', function() {
 function createParticles() {
     const container = document.getElementById('particles');
     if (!container) return;
-    
-    for (let i = 0; i < 50; i++) {
+
+    for (let i = 0; i < 40; i++) {
         const particle = document.createElement('div');
         particle.className = 'particle';
         particle.style.left = Math.random() * 100 + '%';
@@ -140,7 +140,7 @@ const typedEl = document.getElementById('typed');
 
 function typeEffect() {
     if (!typedEl) return;
-    
+
     const current = typingPhrases[phraseIndex];
     if (isDeleting) {
         typedEl.textContent = current.substring(0, charIndex - 1);
@@ -170,8 +170,11 @@ function typeEffect() {
 
 function renderSkills() {
     const skillsGrid = document.getElementById('skillsGrid');
-    if (!skillsGrid) return;
-    
+    if (!skillsGrid) {
+        console.error('skillsGrid element not found!');
+        return;
+    }
+
     skillsGrid.innerHTML = '';
     skillsData.forEach(skill => {
         const div = document.createElement('div');
@@ -182,6 +185,7 @@ function renderSkills() {
         `;
         skillsGrid.appendChild(div);
     });
+    console.log('✅ Skills rendered:', skillsData.length);
 }
 
 // ============================================================
@@ -190,8 +194,11 @@ function renderSkills() {
 
 function renderProjects() {
     const projectsGrid = document.getElementById('projectsGrid');
-    if (!projectsGrid) return;
-    
+    if (!projectsGrid) {
+        console.error('projectsGrid element not found!');
+        return;
+    }
+
     projectsGrid.innerHTML = '';
     projectsData.forEach(proj => {
         const div = document.createElement('div');
@@ -208,6 +215,7 @@ function renderProjects() {
         `;
         projectsGrid.appendChild(div);
     });
+    console.log('✅ Projects rendered:', projectsData.length);
 }
 
 // ============================================================
@@ -219,13 +227,13 @@ function setupHamburger() {
     const navLinks = document.getElementById('navLinks');
 
     if (hamburger && navLinks) {
-        hamburger.addEventListener('click', () => {
+        hamburger.addEventListener('click', function() {
             hamburger.classList.toggle('active');
             navLinks.classList.toggle('open');
         });
 
         document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
+            link.addEventListener('click', function() {
                 hamburger.classList.remove('active');
                 navLinks.classList.remove('open');
             });
@@ -240,8 +248,8 @@ function setupHamburger() {
 function setupNavbar() {
     const navbar = document.getElementById('navbar');
     if (!navbar) return;
-    
-    window.addEventListener('scroll', () => {
+
+    window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
@@ -284,24 +292,24 @@ function setupSmoothScroll() {
 }
 
 // ============================================================
-// INTERSECTION OBSERVER FOR ANIMATIONS
+// SCROLL ANIMATIONS
 // ============================================================
 
-function setupAnimations() {
+function setupScrollAnimations() {
     const cards = document.querySelectorAll('.project-card, .skill-item, .education-card, .stat-card');
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry, index) {
             if (entry.isIntersecting) {
-                setTimeout(() => {
+                setTimeout(function() {
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
-                }, index * 100);
+                }, index * 80);
             }
         });
     }, { threshold: 0.1 });
-    
-    cards.forEach((card, index) => {
+
+    cards.forEach(function(card, index) {
         card.style.opacity = '0';
         card.style.transform = 'translateY(30px)';
         card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -314,6 +322,8 @@ function setupAnimations() {
 // ============================================================
 
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('🚀 Portfolio initializing...');
+
     createParticles();
     renderSkills();
     renderProjects();
@@ -321,17 +331,10 @@ document.addEventListener('DOMContentLoaded', function() {
     setupNavbar();
     setupContactForm();
     setupSmoothScroll();
-    setupAnimations();
-    
-    // Start typing effect
+    setupScrollAnimations();
+
+    // Start typing effect after a small delay
     setTimeout(typeEffect, 500);
+
+    console.log('✅ Portfolio initialized successfully!');
 });
-
-// ============================================================
-// CONSOLE LOG
-// ============================================================
-
-console.log('🚀 Hifsa Umer Portfolio loaded successfully!');
-console.log('📊 Projects Loaded:', projectsData.length);
-console.log('🛠️ Skills Loaded:', skillsData.length);
-console.log('✨ Portfolio by Hifsa Umer');
