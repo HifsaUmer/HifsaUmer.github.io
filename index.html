@@ -16,6 +16,11 @@
 </head>
 <body>
 
+    <!-- ===== PRELOADER ===== -->
+    <div class="preloader" id="preloader">
+        <div class="loader"></div>
+    </div>
+
     <!-- ===== ANIMATED BACKGROUND ===== -->
     <div class="bg-orbs">
         <span></span>
@@ -23,6 +28,9 @@
         <span></span>
         <span></span>
     </div>
+
+    <!-- ===== PARTICLES ===== -->
+    <div class="particles" id="particles"></div>
 
     <!-- ===== NAVIGATION ===== -->
     <nav id="navbar">
@@ -48,7 +56,8 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Hi, I'm <span class="highlight">Hifsa Umer</span></h1>
+                    <div class="hero-greeting">👋 Hello, I'm</div>
+                    <h1><span class="highlight">Hifsa Umer</span></h1>
                     <p class="subtitle">🤖 <span>AI Enthusiast</span> · <span>Full Stack Developer</span> · <span>QA & Testing</span></p>
                     <div class="hero-typing">
                         <span id="typed"></span><span class="cursor"></span>
@@ -103,9 +112,20 @@
                         <strong>NestJS</strong>, <strong>TypeScript</strong>, <strong>PostgreSQL</strong>, and testing tools including 
                         <strong>Playwright</strong>, <strong>Cypress</strong>, <strong>Jira</strong>, and <strong>Postman</strong>.
                     </p>
-                    <p>
-                        🎯 <strong>Mission:</strong> Building intelligent, scalable, and user-friendly applications that make a difference.
-                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-rocket"></i>
+                            <span>Building intelligent solutions</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-code"></i>
+                            <span>Writing clean, scalable code</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-users"></i>
+                            <span>Collaborative team player</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="about-stats">
                     <div class="stat-card">
@@ -117,7 +137,7 @@
                         <div class="label">Projects Completed</div>
                     </div>
                     <div class="stat-card">
-                        <div class="number">5+</div>
+                        <div class="number">6</div>
                         <div class="label">Tech Stacks</div>
                     </div>
                     <div class="stat-card">
