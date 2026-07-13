@@ -21,14 +21,6 @@
         <div class="loader"></div>
     </div>
 
-    <!-- ===== ANIMATED BACKGROUND ===== -->
-    <div class="bg-orbs">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-
     <!-- ===== PARTICLES ===== -->
     <div class="particles" id="particles"></div>
 
@@ -43,7 +35,7 @@
                 <li><a href="#education">Education</a></li>
                 <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
             </ul>
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <button class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -69,10 +61,10 @@
                         <span class="badge">🧪 QA Automation</span>
                     </div>
                     <div class="hero-social">
-                        <a href="mailto:hifsaumer629@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                        <a href="https://linkedin.com/in/hifsa-umer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/hifsaumer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://hifsaumer.github.io" aria-label="Portfolio"><i class="fas fa-globe"></i></a>
+                        <a href="mailto:hifsaumer629@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="https://linkedin.com/in/hifsa-umer"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/hifsaumer"><i class="fab fa-github"></i></a>
+                        <a href="https://hifsaumer.github.io"><i class="fas fa-globe"></i></a>
                     </div>
                 </div>
                 <div class="hero-visual">
@@ -80,12 +72,6 @@
                         <div class="avatar-ring"></div>
                         <div class="avatar-inner">
                             <span class="avatar-placeholder">👩‍💻</span>
-                            <div class="floating-dots">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -105,7 +91,7 @@
                     <p>
                         I'm a <strong>Computer Science student</strong> at <strong>SZABIST University</strong> with a strong interest in 
                         <strong>Artificial Intelligence</strong>, <strong>Full Stack Development</strong>, <strong>QA Automation</strong>, 
-                        and <strong>DevOps</strong>. I enjoy solving real-world problems through technology and continuously improving my technical skills.
+                        and <strong>DevOps</strong>. I enjoy solving real-world problems through technology.
                     </p>
                     <p>
                         I have experience working with technologies like <strong>ASP.NET MVC</strong>, <strong>React</strong>, 
@@ -113,37 +99,16 @@
                         <strong>Playwright</strong>, <strong>Cypress</strong>, <strong>Jira</strong>, and <strong>Postman</strong>.
                     </p>
                     <div class="about-highlights">
-                        <div class="highlight-item">
-                            <i class="fas fa-rocket"></i>
-                            <span>Building intelligent solutions</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-code"></i>
-                            <span>Writing clean, scalable code</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-users"></i>
-                            <span>Collaborative team player</span>
-                        </div>
+                        <div class="highlight-item"><i class="fas fa-rocket"></i> Building intelligent solutions</div>
+                        <div class="highlight-item"><i class="fas fa-code"></i> Writing clean, scalable code</div>
+                        <div class="highlight-item"><i class="fas fa-users"></i> Collaborative team player</div>
                     </div>
                 </div>
                 <div class="about-stats">
-                    <div class="stat-card">
-                        <div class="number">2023</div>
-                        <div class="label">Started BSCS</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="number">10+</div>
-                        <div class="label">Projects Completed</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="number">6</div>
-                        <div class="label">Tech Stacks</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="number">🏆</div>
-                        <div class="label">Competitions</div>
-                    </div>
+                    <div class="stat-card"><div class="number">2023</div><div class="label">Started BSCS</div></div>
+                    <div class="stat-card"><div class="number">10+</div><div class="label">Projects Completed</div></div>
+                    <div class="stat-card"><div class="number">6</div><div class="label">Tech Stacks</div></div>
+                    <div class="stat-card"><div class="number">🏆</div><div class="label">Competitions</div></div>
                 </div>
             </div>
         </div>
@@ -156,7 +121,9 @@
                 <h2>Technical <span>Skills</span></h2>
                 <p>Technologies I work with to build great solutions</p>
             </div>
-            <div class="skills-grid" id="skillsGrid"></div>
+            <div class="skills-grid" id="skillsGrid">
+                <!-- Skills will be injected by JavaScript -->
+            </div>
         </div>
     </section>
 
@@ -167,7 +134,9 @@
                 <h2>Featured <span>Projects</span></h2>
                 <p>Solutions that delivered real business impact</p>
             </div>
-            <div class="projects-grid" id="projectsGrid"></div>
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be injected by JavaScript -->
+            </div>
         </div>
     </section>
 
@@ -217,37 +186,18 @@
             <div class="contact-wrapper">
                 <div class="contact-info">
                     <h3>Get in Touch</h3>
-                    <p>
-                        I'm always open to discussing new opportunities, collaborations,
-                        or just having a chat about technology.
-                    </p>
+                    <p>I'm always open to discussing new opportunities, collaborations, or just having a chat about technology.</p>
                     <div class="contact-item">
                         <div class="icon"><i class="fas fa-envelope"></i></div>
-                        <div class="text">
-                            <strong>Email</strong>
-                            hifsaumer629@gmail.com
-                        </div>
+                        <div class="text"><strong>Email</strong> hifsaumer629@gmail.com</div>
                     </div>
                     <div class="contact-item">
                         <div class="icon"><i class="fas fa-phone"></i></div>
-                        <div class="text">
-                            <strong>Phone</strong>
-                            +92 309 3565860
-                        </div>
+                        <div class="text"><strong>Phone</strong> +92 309 3565860</div>
                     </div>
                     <div class="contact-item">
                         <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <div class="text">
-                            <strong>Location</strong>
-                            Karachi, Pakistan
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="icon"><i class="fab fa-linkedin-in"></i></div>
-                        <div class="text">
-                            <strong>LinkedIn</strong>
-                            <a href="https://linkedin.com/in/hifsa-umer">linkedin.com/in/hifsa-umer</a>
-                        </div>
+                        <div class="text"><strong>Location</strong> Karachi, Pakistan</div>
                     </div>
                 </div>
                 <form class="contact-form" id="contactForm">
@@ -264,11 +214,7 @@
     <!-- ===== FOOTER ===== -->
     <footer>
         <div class="container">
-            <p>
-                &copy; 2026 Hifsa Umer &middot; Crafted by
-                <span class="heart">Hifsa</span> &middot;
-                <a href="#home">Back to top <i class="fas fa-arrow-up"></i></a>
-            </p>
+            <p>&copy; 2026 Hifsa Umer &middot; Crafted with <span class="heart">❤️</span> &middot; <a href="#home">Back to top <i class="fas fa-arrow-up"></i></a></p>
         </div>
     </footer>
 
